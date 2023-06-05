@@ -105,17 +105,126 @@ console.clear();
 
 // dvieju areju suma
 
-function arrayPlusArray(arr1, arr2) {
-    let sum = 0;
-    let arr3 = [];
-    arr3 = arr1.concat(arr2);
-    for(let i = 0; i < arr3.length; i++){
-        sum += arr3[i]; 
-    }
-    return sum;
-  }
+// function arrayPlusArray(arr1, arr2) {
+//     let sum = 0;
+//     let arr3 = [];
+//     arr3 = arr1.concat(arr2);
+//     for(let i = 0; i < arr3.length; i++){
+//         sum += arr3[i]; 
+//     }
+//     return sum;
+//   }
 
-  let arr = [5, 7, 8, 9];
-  let arr0 = [5, 10, 8, 2];
-  console.log(arrayPlusArray(arr, arr0));
+//   let arr = [5, 7, 8, 9];
+//   let arr0 = [5, 10, 8, 2];
+//   console.log(arrayPlusArray(arr, arr0));
 
+// Write a function which calculates the average of the numbers in a given list.
+
+// Note: Empty arrays should return 0.
+
+// function findAverage(array) {
+//     let sum = 0;
+//     let average = 0;
+//     if(array.length !== 0){
+//         for(let i = 0; i < array.length; i++){
+//             sum += array[i];
+//             average = sum / array.length;
+//         }
+//     }else{
+//         console.log('Array cannot be empty');
+//     }
+//     return average;
+//   }
+
+// let arejus = [5, 4, 2, 10, 5, 8, 4];
+
+// console.log(findAverage(arejus));
+
+
+// function findAverage(array){
+//     let sum = 0;
+//     let average = 0;
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] === 0){
+//             sum += array[i];
+//             // average = sum / array[i];
+//         }else {
+//             console.log('Array cannot be empty!');
+//         }
+//     }
+//     return sum;
+// }
+
+// let arejus = [];
+// console.log(findAverage(arejus));
+
+//reduce bandymas
+
+
+
+
+//code wars code:
+
+// function find_average(array) {
+//     if (array.length === 0) {
+//     return 0;
+//     }
+//     var result = 0;
+//     for (i=0; i<array.length; i++) {
+//       result +=array[i];
+//     }
+//     return result/array.length;
+//   }
+
+//code wars code 2:
+
+// var find_average = (array) => {  
+//     return array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
+//   }
+
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 
+// and above with '1'. Return the resulting string.
+
+// Note: input will never be an empty string
+
+// function replace(string) {
+//     let newArr = [];
+//     let pakeistas = [];
+//     let smallerArr = [];
+//     newArr = string.split('');
+//     for(let i = 0; i < newArr.length; i++){
+//         pakeistas.push(newArr[i].replace(/1|2|3|4|5/g, 0));
+//     }
+//     return pakeistas;
+// }
+
+// let arejus = '122233246484648486';
+
+// console.log(replace(arejus));
+
+
+// function fakeBin(x) {
+//     let arr = [];
+//     let newArr = [];
+//     arr = x.split('');
+//     for(let i = 0; i < arr.length; i++){
+//        if(arr[i] < 5){
+//             newArr.push('0');
+//         }else {
+//            newArr.push('1');
+//        }
+//     }
+//     return newArr.join('');
+// }
+
+// let arejus = '122233246484648486';
+
+// console.log(fakeBin(arejus));
+
+// code wars code:
+
+// function fakeBin(x){
+//     return x.replace( /[0-4]/g, "0" ).replace( /[5-9]/g, "1" )
+//   }
