@@ -103,3 +103,19 @@ console.clear();
 
 // console.log(missing('1ve0ka5'));
 
+// dvieju areju suma
+
+function arrayPlusArray(arr1, arr2) {
+    let sum = 0;
+    let arr3 = [];
+    arr3 = arr1.concat(arr2);
+    for(let i = 0; i < arr3.length; i++){
+        sum += arr3[i]; 
+    }
+    return sum;
+  }
+
+  let arr = [5, 7, 8, 9];
+  let arr0 = [5, 10, 8, 2];
+  console.log(arrayPlusArray(arr, arr0));
+
