@@ -233,12 +233,57 @@ console.clear();
 // Given a non-negative integer, 3 for example, return a string with a murmur: 
 // "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
 
+
 // function countSheep(num) {
-//     let count;
-//     for(let i = 0; i <= num; i++){
+//     let i = num;
+//     let count = '';
+//     do {
 //         count = console.log(`${i} sheep...`);
-//     }
+//         i++;
+//     }while(i <= 5);
 //     return count;
 // }
 
 // console.log(countSheep(5));
+
+// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 
+// is 1. (81-1-1-81)
+
+// Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 
+// is 25. (49-36-25)
+
+// Note: The function accepts an integer and returns an integer.
+
+// Happy Coding!
+
+// let number = '56456';
+
+// console.log(String(number).split('').map(Number));
+
+// let number = 24256772;
+
+// let squareDigits = (num) => {
+//     let result = '';
+//     let number = '';
+//     let array = String(num).split('').map(Number);
+//         for(let i = 0; i < array.length; i++){
+//             result += array[i] ** 2;
+//         }
+//         number = parseInt(result);
+//     return number;
+// }
+
+// console.log(squareDigits(number));
+
+// code from codewars:
+
+//function squareDigits(num){
+//     var string = num.toString();
+//     var results = [];
+//     for (var i = 0; i < string.length; i++){
+//         results[i] = string[i] * string[i];
+//     }
+//     return Number(results.join(''));
+// };
