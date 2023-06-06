@@ -304,12 +304,40 @@ console.clear();
 // 1,5,3  --> 5 (1 + 4)
 // This is the first kata in the series:
 
-// let sequenceSum = (begin, end, step) => {
-//     let result = [];
-//         for(let i = begin; i <= end; i++){
-//             result += begin + step;
-//         }
-//         return result;
-//   };
+let sequenceSum = (begin, end, step) => {
+    let result = [];
+        for(let i = begin; i <= end; i = i + step){
+            result.push(i);
+        }
+        return result;
+  };
 
-//   console.log(sequenceSum(2, 6, 2));
+  console.log(sequenceSum(2, 6, 2));
+
+// const start = 0;
+// const end = 5;
+// let sum = 0;
+
+// for (let i = 0; i <= 5; i++){
+//     sum += i;
+//     console.log(i, sum);
+
+// }
+
+// console.log(sum);
+
+// console.clear();
+
+// let pazymiai = [10, 2, 8, -7, 10];
+// let sum = 0;
+// let average = 0;
+// let kiek = 0;
+
+// for(let i = 0; i < pazymiai.length; i++){
+//     if(pazymiai[i] > 0){
+//         kiek++; 
+//     }
+// }
+
+
+// console.log(kiek);
