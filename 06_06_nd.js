@@ -15,9 +15,10 @@ console.clear();
 // const masyvas2 = [1, 2, 2, 3];
 // const masyvas3 = [5, 4, 3, 2, 1];
 // const masyvas4 = [5, 4, 3, 2, 1, 1, 1, 1, 1, 2, 2, 3];
-// let vienodi = 0;
+
 
 // let kiekis = (masyvas, skaicius) => {
+//     let vienodi = 0;
 //     for(let i = 0; i < masyvas.length; i++ ){
 //         if(masyvas[i] === skaicius){
 //             vienodi++;
@@ -26,7 +27,7 @@ console.clear();
 //     return vienodi;
 // }
 
-// console.log(kiekis(masyvas4, 1));
+// console.log(kiekis(masyvas1, 1));
 
 
 
@@ -44,7 +45,7 @@ console.clear();
 // Pratestuota
 
 // let start = 0;
-// let end = 100;
+// let end = 4;
 
 // let sumIntervale = 0;
 
@@ -79,11 +80,11 @@ console.clear();
 // let stringas = 'abcdef';
 
 // let back = (stringas) => {
-//     let arejus = stringas.split('');
+//     //let arejus = stringas.split('');
 //     let naujasStringas = '';
 
-//     for (let i = arejus.length - 1; i >= 0; i--){
-//         naujasStringas += arejus[i];
+//     for (let i = stringas.length - 1; i >= 0; i--){
+//         naujasStringas += stringas[i];
 //     }
 //     return naujasStringas;
 // }
@@ -114,22 +115,24 @@ console.clear();
 
 
 
-// let start = 8;
-// let end = 31;
+let start = 0;
+let end = 11;
 
-// let skaicius = 3;
-// let beLiekanos = 0;
+let skaicius = 7;
 
-// let intervalas = (start, end, skaicius) => {
-//     for(let i = start; i <= end; i++){
-//         if(i % skaicius === 0){
-//             beLiekanos++;
-//         }
-//     }
-//     return `Skaičių intervale tarp ${start} ir ${end}, besidalijančių be liekanos iš ${skaicius} yra ${beLiekanos} vienetai.`;
-// }
 
-// console.log(intervalas(start, end, skaicius));
+let intervalas = (start, end, skaicius) => {
+    let beLiekanos = 0;
+    for(let i = start; i <= end; i++){
+        if(i % skaicius === 0){
+            beLiekanos++;
+        }
+    }
+    return `Skaičių intervale tarp ${start} ir ${end}, besidalijančių be 
+    liekanos iš ${skaicius} yra ${beLiekanos} vienetai.`;
+}
+
+console.log(intervalas(start, end, skaicius));
 
 
 

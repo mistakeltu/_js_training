@@ -341,3 +341,77 @@ console.clear();
 
 
 // console.log(kiek);
+
+
+
+
+
+
+
+// This time no story, no theory. The examples below show you how to write function 
+// accum:
+
+// Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// The parameter of accum is a string which includes only letters from a..z and 
+// A..Z.
+
+// let accum = 'abcd';
+// let arr = accum.split('');
+
+//     accum.charAt().toUpperCase() + accum.slice(1);
+
+
+// console.log(accum);
+
+// const word = "freecodecamp"
+
+// for(let i = 0; i < arr.length; i++) {
+//     let firstLetter = [];
+//     firstLetter = arr[i].charAt(0).toUpperCase();
+//     firstLetter += 'a';
+//     console.log(firstLetter);
+
+// }
+
+// Write a function to convert a name into initials. This kata strictly takes 
+// two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+// let stringas = 'karolis ka';
+// let firstLetter = stringas.match(/\b(\w)/g);
+// let join = firstLetter.join('.').toUpperCase();
+
+// console.log(join);
+
+//codewars code: 
+//function abbrevName(name){
+
+// var nameArray = name.split(" ");
+// return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();}
+
+// let arr = [2, 4, -5, 6, 7, -8];
+// let sum = 0;
+
+// for(let i = 0; i < arr.length; i++){
+//     sum += i;
+//     console.log(arr[i], sum);
+// }
+
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+
+
+// let stringas = ['vienas', 'du', 'trys'];
+
