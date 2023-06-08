@@ -44,7 +44,7 @@ console.clear();
 // Intervalas 0 ... 0
 // Pratestuota
 
-// let start = 0;
+// let start = -4;
 // let end = 4;
 
 // let sumIntervale = 0;
@@ -115,24 +115,27 @@ console.clear();
 
 
 
-let start = 0;
-let end = 11;
+// let start = 0;
+// let end = 11;
 
-let skaicius = 7;
+// let skaicius = 7;
 
 
-let intervalas = (start, end, skaicius) => {
-    let beLiekanos = 0;
-    for(let i = start; i <= end; i++){
-        if(i % skaicius === 0){
-            beLiekanos++;
-        }
-    }
-    return `Skaičių intervale tarp ${start} ir ${end}, besidalijančių be 
-    liekanos iš ${skaicius} yra ${beLiekanos} vienetai.`;
-}
+// let intervalas = (start, end, skaicius) => {
+//     let beLiekanos = 0;
+//     for(let i = start; i <= end; i++){
+//         if(i % skaicius === 0){
+//             beLiekanos++;
+//         }
+//     }
+//     return `Skaičių intervale tarp ${start} ir ${end}, besidalijančių be 
+//     liekanos iš ${skaicius} yra ${beLiekanos} vienetai.`;
+// }
 
-console.log(intervalas(start, end, skaicius));
+// console.log(intervalas(start, end, skaicius));
+
+
+
 
 
 
