@@ -71,23 +71,25 @@ console.clear();
 
 
 
-// const skaicius = 5465465465;
-// let kiek = 0;
+
 // let string = 0;
 
 // function skaitmenuKiekis(number) {
+//     let kiek = 0;
 //         if (typeof number !== 'number' || !isFinite(number)){
 //         console.log(`Reik gi skaiciaus, ok?`);
 //         }else{
 //             string = number.toString().replace('.',''); //<----- vaziuoja ir floatam
-//             for(let i = 0; i < string.length; i++){
-//                 kiek++;
-//             }
+//             kiek = string.length; //<----- nereik foro, kiek yra tiesiog stringo ilgis
+            
 //         }
 //         return `Skaiciuje skaitmenu yra: ${kiek}`;
 //     }
     
-// console.log(skaitmenuKiekis(skaicius));
+// console.log(skaitmenuKiekis(546546));
+// console.log(skaitmenuKiekis(5445));
+// console.log(skaitmenuKiekis(2.5));
+// console.log(skaitmenuKiekis(2.54555));
 
 //----------------------------------------------------
 
@@ -117,27 +119,27 @@ console.clear();
 //----------------------------------------------------
 //Nevaziuoja 0??????????
 
-// let arr = [-10, -2, -1];
-// let theNumber = 0;
+let arr = [Infinity];
 
-// function max(arejus){
-//     //console.log(typeof arejus);
-//     if (typeof arejus !== 'object' || arejus.length === 0){
-//               return `Pateiktas sąrašas negali būti tuščias.`;
-//             }
-//     for(let i = 0; i < arejus.length; i++){
-//         if(typeof arejus[i] === 'string'){  //<----- && !isFinite(arejus)?????????
-//             return `Pateikta netinkamo tipo reikšmė.`;
-//         }
-//         if(theNumber === 0 || arejus[i] > theNumber){ //<------ Nelabai aisku??????? (arejus[i] > theNumber)
-//             theNumber = arejus[i];
-//         }
-//     }
-//     return `Didziausias skaicius: ${theNumber}`;
-// }
+function max(arejus){
+    let theNumber = 0;
+    //console.log(typeof arejus);
+    if (typeof arejus !== 'object' || arejus.length === 0){
+              return `Pateiktas sąrašas negali būti tuščias.`;
+            }
+    for(let i = 0; i < arejus.length; i++){
+        if(typeof arejus[i] === 'string'){  //<----- && !isFinite(arejus)?????????
+            return `Pateikta netinkamo tipo reikšmė.`;
+        }
+        if(theNumber === 0 || arejus[i] > theNumber){ //<------ Nelabai aisku??????? (arejus[i] > theNumber) theNumber === 0 ||
+            theNumber = arejus[i];
+        }
+    }
+    return `Didziausias skaicius: ${theNumber}`;
+}
 
 
-// console.log(max(arr));
+console.log(max(arr));
 
 //----------------------------------------------------
 
@@ -223,14 +225,20 @@ console.clear();
 // let divide = 0;
 
 // function dalyba(skaicius, skaicius1){
+//     //let number = 0;
 //     if (typeof skaicius !== 'number' || !isFinite(skaicius)){
 //         return `Only numbers, ok?`;
 //         }else if (typeof skaicius1 !== 'number' || !isFinite(skaicius1)){
 //             return `Only numbers, ok?`; 
+//         }else {
+//             divide = skaicius / skaicius1;
+//             return divide;
 //         }
-//         divide = skaicius / skaicius1;
         
-//         return divide;
+//         //if (skaicius < 0 || skaicius1 < 0 ){
+//         //     skaicius *= -1;
+//         //     skaicius1 *= -1;
+//         // }
 //     }
 
 // console.log(dalyba(5, 0)); //<------------Kodel infinity???????????????
