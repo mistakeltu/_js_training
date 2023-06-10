@@ -415,3 +415,115 @@ console.clear();
 
 // let stringas = ['vienas', 'du', 'trys'];
 
+//string to hex???
+
+// function stringToHex(stringas){
+//     let arr = [];
+//     let hex = 0;
+//     let result = '';
+
+//     for(let i = 0; i < stringas.length; i++){
+//         hex = stringas.charCodeAt(i).toString(16);
+//         result += ("000"+hex).slice(-4);
+//     }
+//     return result;
+// }
+
+
+// console.log(stringToHex('Hello, kar kar'));
+
+// Our football team has finished the championship.
+
+// Our team's match results are recorded in a collection of strings. Each match is represented by a string in the format "x:y", where x is our team's score and y is our opponents score.
+
+// For example: ["3:1", "2:2", "0:1", ...]
+
+// Points are awarded for each match as follows:
+
+// if x > y: 3 points (win)
+// if x < y: 0 points (loss)
+// if x = y: 1 point (tie)
+// We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
+
+// let array = ["3:1", "2:2", "0:1"];
+
+// let array1 = array.map();
+
+// console.log(array);
+
+// There are pillars near the road. The distance between the pillars is the same and the width of the pillars is the same. Your function accepts three arguments:
+
+// number of pillars (≥ 1);
+// distance between pillars (10 - 30 meters);
+// width of the pillar (10 - 50 centimeters).
+// Calculate the distance between the first and the last pillar in centimeters (without the width of the first and last pillar).
+
+
+// function paperwork(n, m) {
+//     let sum = 0;
+//     if(n < 0 && m < 0){
+//       return 0;
+//     }else if (n > 0 &&  m > 0) {
+//       sum = n * m;
+//     }
+//     return sum;
+//   }
+  
+//   console.log(paperwork(-5,-5));
+
+// matching hello in other languages
+// You received a whatsup message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
+
+// Write a simple function to check if the string contains the word hallo in different languages.
+
+// These are the languages of the possible people you met the night before:
+
+// hello - english
+// ciao - italian
+// salut - french
+// hallo - german
+// hola - spanish
+// ahoj - czech republic
+// czesc - polish
+
+// function validateHello(stringas){
+//     let greetings = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc'];
+//     let lower = stringas.toLowerCase();
+//     for(let i = 0; i < greetings.length; i++){
+//         if(lower.includes(greetings[i])){
+//             return true;
+//         }
+//         }
+//         return false;
+//     }
+
+// console.log(validateHello('hoLA'));
+
+//jungiam
+
+
+function longestConsec(strarr, k) {
+    const n = strarr.length;
+  
+    if (n === 0 || k > n || k <= 0) {
+      return "";
+    }
+  
+    let longestString = "";
+  
+    for (let i = 0; i <= n - k; i++) {
+        console.log(i);
+      const currentString = strarr.slice(i, i + k).join("");
+      if (currentString.length > longestString.length) {
+        longestString = currentString;
+      }
+    }
+  
+    return longestString;
+  }
+
+
+  const strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"];
+const k = 2;
+const result = longestConsec(strarr, k);
+console.log(result); // Output: "folingtrashy"
