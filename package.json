@@ -5,6 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "dev": "dead-server --host=localhost --port=4502",
+    "friday": "nodemon 06_09_friday.js",
     "nd07": "nodemon 06_07_nd.js",
     "pomidoras": "nodemon pomidoras.js",
     "nd": "nodemon 06_06_nd.js",
@@ -15,6 +17,7 @@
   "author": "Karolis",
   "license": "MIT",
   "devDependencies": {
+    "dead-server": "^1.0.9",
     "nodemon": "^2.0.22"
   }
 }
