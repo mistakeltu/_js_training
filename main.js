@@ -511,9 +511,10 @@ function longestConsec(strarr, k) {
   
     let longestString = "";
   
-    for (let i = 0; i <= n - k; i++) {
-        console.log(i);
+    for (let i = 0; i <= n ; i++) {
+        console.log(n);
       const currentString = strarr.slice(i, i + k).join("");
+      console.log(currentString);
       if (currentString.length > longestString.length) {
         longestString = currentString;
       }
@@ -526,4 +527,4 @@ function longestConsec(strarr, k) {
   const strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"];
 const k = 2;
 const result = longestConsec(strarr, k);
-console.log(result); // Output: "folingtrashy"
+console.log(result);
