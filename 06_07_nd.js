@@ -119,27 +119,27 @@ console.clear();
 //----------------------------------------------------
 //Nevaziuoja 0??????????
 
-let arr = [Infinity];
+// let arr = [Infinity];
 
-function max(arejus){
-    let theNumber = 0;
-    //console.log(typeof arejus);
-    if (typeof arejus !== 'object' || arejus.length === 0){
-              return `Pateiktas sąrašas negali būti tuščias.`;
-            }
-    for(let i = 0; i < arejus.length; i++){
-        if(typeof arejus[i] === 'string'){  //<----- && !isFinite(arejus)?????????
-            return `Pateikta netinkamo tipo reikšmė.`;
-        }
-        if(theNumber === 0 || arejus[i] > theNumber){ //<------ Nelabai aisku??????? (arejus[i] > theNumber) theNumber === 0 ||
-            theNumber = arejus[i];
-        }
-    }
-    return `Didziausias skaicius: ${theNumber}`;
-}
+// function max(arejus){
+//     let theNumber = 0;
+//     //console.log(typeof arejus);
+//     if (typeof arejus !== 'object' || arejus.length === 0){
+//               return `Pateiktas sąrašas negali būti tuščias.`;
+//             }
+//     for(let i = 0; i < arejus.length; i++){
+//         if(typeof arejus[i] === 'string'){  //<----- && !isFinite(arejus)?????????
+//             return `Pateikta netinkamo tipo reikšmė.`;
+//         }
+//         if(theNumber === 0 || arejus[i] > theNumber){ //<------ Nelabai aisku??????? (arejus[i] > theNumber) theNumber === 0 ||
+//             theNumber = arejus[i];
+//         }
+//     }
+//     return `Didziausias skaicius: ${theNumber}`;
+// }
 
 
-console.log(max(arr));
+// console.log(max(arr));
 
 //----------------------------------------------------
 
@@ -178,32 +178,59 @@ console.log(max(arr));
 
 //----------------------------------------------------
 
-// let stringas = 5464654;
-// let number = 2;
-// let newStringelis = '';
 
 
 // function isrinkRaide(tekstas, skaicius){
+//     let newStringelis = '';
 //      //console.log(stringas.length, skaicius);
-//     if(typeof tekstas !== 'string' || stringas.length === 0){
-//         return `Pirmasis kintamasis yra netinkamo tipo`;
-//     }else if(stringas.length >= 100){
+//     if(typeof tekstas !== 'string' || tekstas.length === 0){
+//         return `Pirmasis kintamasis yra netinkamo tipo arba tuscias`;
+//     }else if(tekstas.length >= 100){
 //         return `Pirmojo kintamojo reikšmė yra netinkamo dydžio.`;
-//     }else if(typeof skaicius !== 'number'){
+//     }else if(typeof skaicius !== 'number' || isNaN(skaicius)){
 //         return `Antrasis kintamasis yra netinkamo tipo.`;
-//     }else if(skaicius < 0) {
+//     }else if(skaicius <= 0) {
 //         return `Antrasis kintamasis turi būti didesnis už nulį.`;
 //     }else if(skaicius >= tekstas.length){
 //         return `Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.`;
 //     }
-//      for(let i = 0; i < tekstas.length; i+=number){
+//      for(let i = 0; i < tekstas.length; i+=skaicius){
 //         newStringelis += tekstas[i];
 //      }
 
 //     return newStringelis;
 // }
+// //TESTAIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII!
+// console.log(isrinkRaide('', 0));
+// console.log(isrinkRaide('labas', 2));
+// console.log(isrinkRaide('Petrelis', 2));
+// console.log(isrinkRaide(null, 0));
+// console.log(isrinkRaide('dasdasd', null));
+// console.log(isrinkRaide(null));
+// console.log(isrinkRaide({}));
+// console.log(isrinkRaide());
+// console.log(isrinkRaide('Wazeeeeeeeeeeeeeeeeeeeeeeeeeeeeee', 3));
+// console.log(isrinkRaide('labas', NaN));
+// console.log(isrinkRaide(NaN, 2));
+// console.log(isrinkRaide(Infinity, 2));
+// console.log(isrinkRaide(-Infinity, 2));
+// console.log(isrinkRaide(true, 2));
+// console.log(isrinkRaide(false, 2));
+// console.log(isrinkRaide(undefined, 2));
+// console.log(isrinkRaide(0, 2));
+// console.log(isrinkRaide('dasdasdas', 500));
+// console.log(isrinkRaide('dasdasdas', false));
+// console.log(isrinkRaide('dasdasdas', NaN));
+// console.log(isrinkRaide('dasdasdas', undefined));
+// console.log(isrinkRaide('dasdasdas', true));
+// console.log(isrinkRaide('dasdasdas', [1,2,3]));
+// console.log(isrinkRaide('dasdasdas', []));
+// console.log(isrinkRaide());
+// console.log(isrinkRaide('', 2));
+// console.log(isrinkRaide('dasdasdas', Infinity)); //<-----
+// console.log(isrinkRaide('dasdasdas', -Infinity)); //<------
+// console.log(isrinkRaide('dsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddddddddddddddddddddssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss', 2));
 
-// console.log(isrinkRaide(stringas, number))
 
 
 //----------------------------------------------------
@@ -222,35 +249,52 @@ console.log(max(arr));
 //----------------------------------------------------
 
 
-// let divide = 0;
 
 // function dalyba(skaicius, skaicius1){
-//     //let number = 0;
+//     let divide = 0;
 //     if (typeof skaicius !== 'number' || !isFinite(skaicius)){
 //         return `Only numbers, ok?`;
 //         }else if (typeof skaicius1 !== 'number' || !isFinite(skaicius1)){
 //             return `Only numbers, ok?`; 
-//         }else {
+//         }
+//         if(skaicius === 0 || skaicius1 === 0){
+//             return `Dalyba is nulio negalima`;
+//         }
 //             divide = skaicius / skaicius1;
 //             return divide;
-//         }
+    
         
-//         //if (skaicius < 0 || skaicius1 < 0 ){
-//         //     skaicius *= -1;
-//         //     skaicius1 *= -1;
-//         // }
-//     }
+        //if (skaicius < 0 || skaicius1 < 0 ){
+        //     skaicius *= -1;
+        //     skaicius1 *= -1;
+        // }
+    // }
 
-// console.log(dalyba(5, 0)); //<------------Kodel infinity???????????????
-// console.log(dalyba(0, 5)); //Cia gerai????
-// console.log(dalyba(10, 5));
-// console.log(dalyba(-10, 5));
-// console.log(dalyba(10, -5));
-// console.log(dalyba(true, -5));
-// console.log(dalyba(true, false));
-// console.log(dalyba(NaN, false));
-// console.log(dalyba(5, NaN));
-// console.log(dalyba(Infinity, NaN)); // ir t.t..............
 
+// //TESTAIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII!
+// console.log(dalyba(5, 2));
+// console.log(dalyba(2, 5));
+// console.log(dalyba(-5, 5));
+// console.log(dalyba(5, -5));
+// console.log(dalyba(-5, -5));
+// console.log(dalyba(NaN, -5));
+// console.log(dalyba(Infinity, -5));
+// console.log(dalyba(Infinity, Infinity));
+// console.log(dalyba(NaN, NaN));
+// console.log(dalyba());
+// console.log(dalyba(5, 0));
+// console.log(dalyba(undefined, 0));
+// console.log(dalyba(5, undefined));
+// console.log(dalyba(Infinity, undefined));
+// console.log(dalyba(Infinity, 5));
+// console.log(dalyba(5, Infinity));
+// console.log(dalyba(5, -Infinity));
+// console.log(dalyba(5, ''));
+// console.log(dalyba(5, []));
+// console.log(dalyba([], 5));
+// console.log(dalyba('', 5));
+// console.log(dalyba(null, 5));
+// console.log(dalyba(null, null));
+// console.log(dalyba(5, null));
 
 
