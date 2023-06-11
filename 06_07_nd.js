@@ -250,51 +250,57 @@ console.clear();
 
 
 
-// function dalyba(skaicius, skaicius1){
-//     let divide = 0;
-//     if (typeof skaicius !== 'number' || !isFinite(skaicius)){
-//         return `Only numbers, ok?`;
-//         }else if (typeof skaicius1 !== 'number' || !isFinite(skaicius1)){
-//             return `Only numbers, ok?`; 
-//         }
-//         if(skaicius === 0 || skaicius1 === 0){
-//             return `Dalyba is nulio negalima`;
-//         }
-//             divide = skaicius / skaicius1;
-//             return divide;
+function dalyba(skaicius, skaicius1){
+    let divide = 0;
+    if (typeof skaicius !== 'number' || !isFinite(skaicius)){
+        return `Only numbers, ok?`;
+        }else if (typeof skaicius1 !== 'number' || !isFinite(skaicius1)){
+            return `Only numbers, ok?`; 
+        }
+        if(skaicius === 0 || skaicius1 === 0){
+            return `Dalyba is nulio negalima`;
+        }
+            divide = skaicius / skaicius1;
+            return divide;
     
         
-        //if (skaicius < 0 || skaicius1 < 0 ){
-        //     skaicius *= -1;
-        //     skaicius1 *= -1;
-        // }
-    // }
+        if (skaicius < 0 || skaicius1 < 0 ){
+            skaicius *= -1;
+            skaicius1 *= -1;
+        }
+    }
 
 
-// //TESTAIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII!
-// console.log(dalyba(5, 2));
-// console.log(dalyba(2, 5));
-// console.log(dalyba(-5, 5));
-// console.log(dalyba(5, -5));
-// console.log(dalyba(-5, -5));
-// console.log(dalyba(NaN, -5));
-// console.log(dalyba(Infinity, -5));
-// console.log(dalyba(Infinity, Infinity));
-// console.log(dalyba(NaN, NaN));
-// console.log(dalyba());
-// console.log(dalyba(5, 0));
-// console.log(dalyba(undefined, 0));
-// console.log(dalyba(5, undefined));
-// console.log(dalyba(Infinity, undefined));
-// console.log(dalyba(Infinity, 5));
-// console.log(dalyba(5, Infinity));
-// console.log(dalyba(5, -Infinity));
-// console.log(dalyba(5, ''));
-// console.log(dalyba(5, []));
-// console.log(dalyba([], 5));
-// console.log(dalyba('', 5));
-// console.log(dalyba(null, 5));
-// console.log(dalyba(null, null));
-// console.log(dalyba(5, null));
-
+//TESTAIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII!
+console.log(dalyba(5, 2));
+console.log(dalyba(2, 5));
+console.log(dalyba(-5, 5));
+console.log(dalyba(5, -5));
+console.log(dalyba(-5, -5));
+console.log(dalyba(NaN, -5));
+console.log(dalyba(Infinity, -5));
+console.log(dalyba(Infinity, Infinity));
+console.log(dalyba(NaN, NaN));
+console.log(dalyba());
+console.log(dalyba(5, 0));
+console.log(dalyba(undefined, 0));
+console.log(dalyba(5, undefined));
+console.log(dalyba(Infinity, undefined));
+console.log(dalyba(Infinity, 5));
+console.log(dalyba(5, Infinity));
+console.log(dalyba(5, -Infinity));
+console.log(dalyba(5, ''));
+console.log(dalyba(5, []));
+console.log(dalyba([], 5));
+console.log(dalyba('', 5));
+console.log(dalyba(null, 5));
+console.log(dalyba(null, null));
+console.log(dalyba(5, null));
+console.log(dalyba('dasdasdas', 500));
+console.log(dalyba('dasdasdas', false));
+console.log(dalyba('dasdasdas', NaN));
+console.log(dalyba('dasdasdas', undefined));
+console.log(dalyba('dasdasdas', true));
+console.log(dalyba('dasdasdas', [1,2,3]));
+console.log(dalyba('dasdasdas', []));
 
