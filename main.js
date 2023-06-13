@@ -502,29 +502,411 @@ console.clear();
 //jungiam
 
 
-function longestConsec(strarr, k) {
-    const n = strarr.length;
+// function longestConsec(strarr, k) {
+//     const n = strarr.length;
   
-    if (n === 0 || k > n || k <= 0) {
-      return "";
-    }
+//     if (n === 0 || k > n || k <= 0) {
+//       return "";
+//     }
   
-    let longestString = "";
+//     let longestString = "";
   
-    for (let i = 0; i <= n ; i++) {
-        console.log(n);
-      const currentString = strarr.slice(i, i + k).join("");
-      console.log(currentString);
-      if (currentString.length > longestString.length) {
-        longestString = currentString;
-      }
-    }
+//     for (let i = 0; i <= n ; i++) {
+//         console.log(n);
+//       const currentString = strarr.slice(i, i + k).join("");
+//       console.log(currentString);
+//       if (currentString.length > longestString.length) {
+//         longestString = currentString;
+//       }
+//     }
   
-    return longestString;
+//     return longestString;
+//   }
+
+
+//   const strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"];
+// const k = 2;
+// const result = longestConsec(strarr, k);
+// console.log(result);
+
+
+// The function is not returning the correct values. Can you figure out why?
+
+// Example (Input --> Output ):
+
+// function getPlanetName(id){
+//   var name;
+//   switch(id){
+//     case 1:
+//       name = 'Mercury';
+//       break;
+//     case 2:
+//       name = 'Venus';
+//       break;
+//     case 3:
+//       name = 'Earth';
+//       break;
+//     case 4:
+//       name = 'Mars';
+//       break;
+//     case 5:
+//       name = 'Jupiter';
+//       break;
+//     case 6:
+//       name = 'Saturn';
+//       break;
+//     case 7:
+//       name = 'Uranus';
+//       break;
+//     case 8:
+//       name = 'Neptune';
+//       break;
+//   }
+  
+//   return name;
+// }
+
+// console.log(getPlanetName(4));
+
+// Objective
+// Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
+
+// E.g.
+
+// arrayMadness([4, 5, 6], [1, 2, 3]); // returns true since 4 ** 2 + 5 ** 2 + 6 ** 2 > 1 ** 3 + 2 ** 3 + 3 ** 3
+
+// function arrayMadness(a, b) {
+//   let asum = 0;
+//   let bsum = 0;
+//   for(let i = 0; i < a.length; i++){
+//     asum += a[i] ** 2;
+//   }
+//   for(let j = 0; j < b.length; j++){
+//     bsum += b[j] ** 3;
+//   }
+//   if(asum > bsum){
+//     return true;
+//   }
+//   return false;
+  
+// }
+
+// console.log(arrayMadness([4, 5, 6], [1, 2, 3]));
+
+//code wars codes:
+
+//const arrayMadness = (a, b) => a.reduce((acc, x) => acc + x**2, 0) > b.reduce((acc, x) => acc + x**3, 0) 
+
+//function arrayMadness(a, b) {
+//   return a.reduce( (sum, el) => sum + el ** 2, 0) >
+//          b.reduce( (sum, el) => sum + el ** 3, 0);
+// }
+
+// const sumPwrs = (a, p) => a.reduce( (s, n) => s + n ** p, 0);
+// const arrayMadness = (a, b) => sumPwrs(a, 2) > sumPwrs(b, 3);
+
+// There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+
+// Your task is to change the letters with diacritics:
+
+// ą -> a,
+// ć -> c,
+// ę -> e,
+// ł -> l,
+// ń -> n,
+// ó -> o,
+// ś -> s,
+// ź -> z,
+// ż -> z
+// and print out the string without the use of the Polish letters.
+
+// For example:
+
+// "Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"
+
+// function correctPolishLetters (string) {
+//   let result = '';
+//   let arrletters = [ 'ą', 'ć', 'ę', 'ł', 'ń', 'ó', 'ś', 'ź', 'ż'];
+//   let replace = ['a', 'c', 'e', 'l', 'n', 'o', 's', 'z', 'z'];
+//   result = string;
+  
+//   for (let i = 0; i < arrletters.length; i++){
+//       result = result.replace(arrletters[i], replace[i]);
+//   }
+//   return result;
+// }
+
+// console.log(correctPolishLetters('Wladysław Reymont'));
+// console.log(correctPolishLetters('Lech Wałęsa'));
+// console.log(correctPolishLetters('Maria Skłodowska-Curie'));
+
+
+
+// Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+
+// If no occurrences can be found, a count of 0 should be returned.
+
+// ("Hello", "o")  ==>  1
+// ("Hello", "l")  ==>  2
+// ("", "z")       ==>  0
+// str_count("Hello", 'o'); // returns 1
+// str_count("Hello", 'l'); // returns 2
+// str_count("", 'z'); // returns 0
+// Notes
+// The first argument can be an empty string
+// In languages with no distinct character data type, the second argument will be a string of length 1
+
+// function strCount(str, letter){  
+//   let result = 0;
+//     if (str.length === 0){
+//       return 0;    
+//     }
+//     for(let i = 0; i < str.length; i++){
+//       if (str[i] === letter){
+//         result++;
+//       }
+//       } 
+//       if (result === 0){
+//         return 0;
+//       }
+
+//       return result;
+//     }
+
+
+// console.log(strCount('gfgfdgwwwdf', 'w'));
+
+
+//code wars kodai:
+
+//function strCount(str, letter){  
+//   return str.split(letter).length-1
+// }
+
+
+// In this Kata we are passing a number (n) into a function.
+
+// Your code will determine if the number passed is even (or not).
+
+// The function needs to return either a true or false.
+
+// Numbers may be positive or negative, integers or floats.
+
+// Floats with decimal part non equal to zero are considered UNeven for this kata.
+
+// function testEven(n) {
+//  if (n % 2 === 0){
+//   return true;
+//  }else {
+//   return false;
+//  }
+// }
+
+// console.log(testEven());
+
+// You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
+
+// Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+
+// Function should return true if it is possible and false if not.
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   let kiek = distanceToPump / mpg;
+
+//   if(kiek <= fuelLeft){
+//     return true;
+//   }else {
+//     return false;
+//   }
+
+// };
+
+
+//TESTAI
+//assert.equal(zeroFuel(100, 50, 1), false);
+// console.log(zeroFuel(50,25,2));
+
+//CODE WARS KODAI:
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   return distanceToPump/mpg <= fuelLeft
+// };
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => mpg * fuelLeft >= distanceToPump;
+
+
+// At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.
+
+// You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].
+
+// function differenceInAges(ages){
+// let newAges = [];
+// let max = 0;
+// let min = Infinity;
+// let difference = 0;
+// for(let i = 0; i < ages.length; i++){
+//   if(max < ages[i]){
+//     max = ages[i];
+//   }
+// }
+// for(let j = 0; j < ages.length; j++){
+//   if (ages[j] < min){
+//     min = ages[j];
+//   }
+// }
+// difference = max - min;
+// newAges.push(min, max, difference);
+// return newAges;
+
+// }
+
+// //console.log(newAges);
+// console.log(differenceInAges([82, 15, 6, 38, 35]));
+
+//TESTAI
+// differenceInAges([82, 15, 6, 38, 35]), [6, 82, 76]);
+// differenceInAges([57, 99, 14, 32]), [14, 99, 85]);
+
+//CODEWARS KODAI:
+
+// function differenceInAges (ages) {
+
+//   let max = Math.max(...ages),
+//       min = Math.min(...ages)
+//       diff = max - min
+      
+//   return [min, max, diff]
+// }
+
+
+
+// A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+// Return true if yes, false otherwise :)
+
+
+// function hero(bullets, dragons){
+//   if (bullets / dragons >= 2){
+//     return true;
+//   }else {
+//     return false;
+//   }
+//   }
+
+//   console.log(hero(7 / 4));
+
+//CODEWARS KODAI:
+
+// function hero(bullets, dragons){
+//   return bullets >= dragons * 2
+// }
+
+
+// function hero(bullets, dragons){
+//   //Get Coding!
+//   return (bullets / 2 >= dragons) ? true : false;
+//   }
+
+
+// Complete the function that receives as input a string, and produces outputs according to the following table:
+
+// Input	Output
+// "Jabroni"	"Patron Tequila"
+// "School Counselor"	"Anything with Alcohol"
+// "Programmer"	"Hipster Craft Beer"
+// "Bike Gang Member"	"Moonshine"
+// "Politician"	"Your tax dollars"
+// "Rapper"	"Cristal"
+// anything else	"Beer"
+// Note: anything else is the default case: if the input to the function is not any of the values in the table, then the return value should be "Beer".
+
+// Make sure you cover the cases where certain words do not show up with correct capitalization. For example, the input "pOLitiCIaN" should still return "Your tax dollars".
+
+// function getDrinkByProfession(param){
+//     let string = '';
+//     string = param.toLowerCase();
+//     if(string === 'jabroni'){
+//         return "Patron Tequila";
+//     }else if(string === "school counselor"){
+//         return "Anything with Alcohol";
+//     }else if(string === "programmer"){
+//         return "Hipster Craft Beer";
+//     }else if(string === "bike gang member"){
+//         return "Moonshine";
+//     }else if(string === "politician"){
+//         return "Your tax dollars";
+//     }else if(string === "rapper"){
+//         return "Cristal";
+//     }else {
+//         return "Beer";
+//     }
+// }
+
+// console.log(getDrinkByProfession('Bike Gang Member'));
+
+//CODEWARS KODAI:
+
+// function getDrinkByProfession(param) {
+//     param = param.toLowerCase();
+    
+//     switch(param) {
+//       case "jabroni": return "Patron Tequila";
+//       case "school counselor": return "Anything with Alcohol";
+//       case "programmer": return "Hipster Craft Beer";
+//       case "bike gang member": return "Moonshine";
+//       case "politician": return	"Your tax dollars";
+//       case "rapper": return "Cristal";
+//       default: return "Beer";
+//     }
+//   }
+
+// Triple Trouble
+// Create a function that will return a string that combines all of the letters of the three inputed strings in groups. Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter, see example below!
+
+// E.g. Input: "aa", "bb" , "cc" => Output: "abcabc"
+
+// Note: You can expect all of the inputs to be the same length.
+
+// function tripleTrouble(one, two, three){
+//     let result = '';  
+//     for(let i = 0; i < one.length; i++){
+//         result += one[i] + two[i] + three[i];    
+//     }
+//     return result;
+//    }
+
+//    console.log(tripleTrouble("burn", "reds", "roll")); //brrueordlnsl
+
+//    //CODEWARS kodai:
+
+//    function tripleTrouble(one, two, three) {
+//     var result = "";
+//     for (let i = 0; i < one.length; i++) {
+//       result += one.charAt(i) + two.charAt(i) + three.charAt(i);
+//     }
+//     return result;
+//   }
+
+//   const tripleTrouble = (one, two, three) => one.split("").map((letter, index) => letter + two[index] + three[index]).join("");
+
+//------------------------------------------------------
+
+// Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid.
+
+// This Kata is similar to the Valid Parentheses Kata, but introduces new characters: brackets [], and curly braces {}. Thanks to @arnedag for the idea!
+
+// All input strings will be nonempty, and will only consist of parentheses, brackets and curly braces: ()[]{}.
+
+// What is considered Valid?
+// A string of braces is considered valid if all braces are matched with the correct brace.
+
+// Examples
+// "(){}[]"   =>  True
+// "([{}])"   =>  True
+// "(}"       =>  False
+// "[(])"     =>  False
+// "[({})](]" =>  False
+
+function validBraces(braces){
+    //TODO 
   }
-
-
-  const strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"];
-const k = 2;
-const result = longestConsec(strarr, k);
-console.log(result);
