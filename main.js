@@ -1210,18 +1210,197 @@ console.clear();
 // ["M4A1", 6] => 1
 
 // The return Will always be an integer so as the params.
+//   let result = 0;
+//   let bullets = info * 3;
+//   let arr = [['PT92', 17], ['M4A1', 30], ['M16A2', 30], ['PSG1', 5]];
+//   for (let i = 0; i < arr.length; i++){
+//     if(arr[i][0] === arr[i][0]){
+//       if(arr[i[1]] < bullets){
+//         result = Math.floor(bullets / arr[i][1])
+//       }else{
+//         return 1;
+//       }
+//     }
+//     return `nera`;
+//   }
+//   return result;
+// }
 
 
-function magNumber(info){
-  let result = 0;
-  let bullets = info * 3;
-  let arr = [['PT92', 17], ['M4A1', 30], ['M16A2', 30], ['PSG1', 5]];
-  for (let i = 0; i < arr.length; i++){
-    if(arr[i][0] === 'info'){
-      result = arr[]
+// function magNumber(info){
+
+  
+// }
+
+// console.log(magNumber(['PT92', 17]));
+
+// Fix the function
+// I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the wrong number.
+
+// Can you help me fix the function?
+
+// function addFive(num) {
+//     var total = num + 5
+//     return total;
+//   }
+
+// Make a simple function called greet that returns the most-famous "hello world!".
+
+// Style Points
+// Sure, this is about as easy as it gets. But how clever can you be to create the most creative "hello world" you can think of? What is a "hello world" solution you would want to show your friends?
+
+// function greet(){
+//     return `Hello, World!`;
+// }
+
+// console.log(greet());
+
+
+// When provided with a number between 0-9, return it in words.
+
+// Input :: 1
+
+// Output :: "One".
+
+// If your language supports it, try using a switch statement.
+
+
+// function switchItUp(number){
+//     switch(number){
+//         case 1:
+//             return 'One';
+//         case 2:
+//              return 'Two';
+//         case 3:
+//             return'Three';
+//         case 4:
+//             return 'Four';
+//         case 5:
+//             return 'Five';
+//         case 6:
+//             return 'Six';
+//         case 7:
+//             return 'Seven';
+//         case 8:
+//             return 'Eight';
+//         case 9:
+//             return 'Nine';
+//         default:
+//             return 'Invalid number';
+//     }
+// }
+
+// console.log(switchItUp(1));
+
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+
+// if bmi <= 18.5 return "Underweight"
+
+// if bmi <= 25.0 return "Normal"
+
+// if bmi <= 30.0 return "Overweight"
+
+// if bmi > 30 return "Obese"
+
+// function bmi(weight, height) {
+//     let bmi = weight / height / height;
+//     console.log(bmi);
+//     if(bmi <= 18.5){
+//         return 'Underweight';
+//     }
+//     if(bmi <= 25.0){
+//         return 'Normal';
+//     }
+//     if(bmi <= 30.0) {
+//         return 'Overweight';
+//     }
+//     if(bmi > 30.0){
+//         return 'Obese';
+//     }
+//   }
+
+//   console.log(bmi(80, 1.80));
+
+// CODEWARS KODAI:
+
+// function bmi(weight, height) {
+//     var result = weight/Math.pow(height,2) 
+    
+//     if (result <= 18.5) {
+//       return "Underweight";
+//     } else if (result <= 25) {
+//       return "Normal";
+//     } else if (result <= 30) {
+//       return "Overweight";
+//     } else {
+//       return "Obese";
+//     }
+    
+//   }
+
+// You are given two interior angles (in degrees) of a triangle.
+
+// Write a function to return the 3rd.
+
+// Note: only positive integers will be tested.
+
+// https://en.wikipedia.org/wiki/Triangle
+
+// function otherAngle(a, b) {
+//     let angle = 0;
+//     if(a > 0 && b > 0){
+//         angle = 180 - a - b;
+//     }
+//     return angle;
+//   }
+
+//   console.log(otherAngle(30, 60));
+
+
+//   CODEWARS KODAI:
+
+//   function otherAngle(a, b) {
+//     return 180-(a+b);
+//   }
+
+
+// In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+
+// For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+
+// Your function will be tested with pre-made examples as well as random ones.
+
+// If you can, try writing it in one line of code.
+
+
+// function findDifference(a, b) {
+//     let sum = 0;
+//     sum = a[0] * a[1] * a[2] - b[0] * b[1] * b[2];
+//     if(sum < 0){
+//         sum *= - 1;
+//     }
+//     return sum;
+//   }
+
+//   CODEWARS KODAI:
+
+//   function find_difference(a, b) {
+//     return Math.abs(a[0]*a[1]*a[2]-b[0]*b[1]*b[2]);
+//   }
+
+
+// What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
+
+// Example(Input --> Output)
+
+// "apple ban" --> ["apple 5", "ban 3"]
+// "you will win" -->["you 3", "will 4", "win 3"]
+// Your task is to write a function that takes a String and returns an Array/list with the length of each word added to each element .
+
+// Note: String will have at least one element; words will always be separated by a space.
+
+
+function addLength(str) {
+    
     }
-    console.log(arr[i][0]);
-  }
-}
-
-console.log(magNumber());
+    
