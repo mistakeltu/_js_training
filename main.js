@@ -907,6 +907,321 @@ console.clear();
 // "[(])"     =>  False
 // "[({})](]" =>  False
 
-function validBraces(braces){
-    //TODO 
+//str.match(/{|}|\[|\]/g)
+
+//(/\[|\]/g)
+
+// function validBraces(braces){
+//     if(braces.length === 0){
+//       return `It should be not empty:)`;
+//     }
+//     for(let i = 0; i < braces.length; i++){
+//       if(braces[i].match(/{|}|\[|\]/g)){
+//         return true;
+//       }else {
+//         return false;
+//       }
+//     }
+//   }
+
+//   console.log(validBraces('{]'));
+
+// You and a friend have decided to play a game to drill your statistical intuitions. The game works like this:
+
+// You have a bunch of red and blue marbles. To start the game you grab a handful of marbles of each color and put them into the bag, keeping track of how many of each color go in. You take turns reaching into the bag, guessing a color, and then pulling one marble out. You get a point if you guessed correctly. The trick is you only have three seconds to make your guess, so you have to think quickly.
+
+// You've decided to write a function, guessBlue() to help automatically calculate whether you should guess "blue" or "red". The function should take four arguments:
+
+// the number of blue marbles you put in the bag to start
+// the number of red marbles you put in the bag to start
+// the number of blue marbles pulled out so far (always lower than the starting number of blue marbles)
+// the number of red marbles pulled out so far (always lower than the starting number of red marbles)
+// guessBlue() should return the probability of drawing a blue marble, expressed as a float. For example, guessBlue(5, 5, 2, 3) should return 0.6.
+
+// function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+//   let howManyLeft = 0;
+//   howManyLeft = (blueStart - bluePulled) + (redStart - redPulled);
+//   let chances = (blueStart - bluePulled) / howManyLeft;
+
+//   return chances;
+// }
+
+
+// console.log(guessBlue(5,5,2,3));
+// console.log(guessBlue(5, 7, 4, 3));
+// console.log(guessBlue(12, 18, 4, 6));
+
+
+// Clock shows h hours, m minutes and s seconds after midnight.
+
+// Your task is to write a function which returns the time since midnight in milliseconds.
+
+
+// Example:
+// h = 0
+// m = 1
+// s = 1
+
+// result = 61000
+// Input constraints:
+
+// 0 <= h <= 23
+// 0 <= m <= 59
+// 0 <= s <= 59
+
+//10 ** 3
+
+// function past(h, m, s){
+//   let result = 0;
+//   if(0 !== h && h <= 23){
+//     h = h * 60 * 60 * (10 ** 3);
+//   }
+//   if(0 !== m && m <= 59){
+//     m = m * 60 * (10 ** 3);
+//   }
+//   if(0 !== s && s <= 59){
+//     s = s * 1 * (10 ** 3);
+//   }
+
+//     result = h + m + s;
+  
+  
+//   return result;
+// }
+
+// console.log(past(1, 44, 37));
+
+// //CODEWARS KODAI:
+
+// function past(h, m, s){
+//   var hours = h * 60 * 60 * 1000;
+//   var minutes = m * 60 * 1000;
+//   var seconds = s * 1000;
+  
+//   return hours + minutes + seconds;
+// }
+
+// function past(h, m, s){
+//   return ((h*3600)+(m*60)+s)*1000;
+// }
+
+// Summation
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+// For example (Input -> Output):
+
+// 2 -> 3 (1 + 2)
+// 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+// var summation = function (num) {
+//   let sum = 0;
+//   if ( num < 0 ){
+//     return `Should be positive!`;
+//   }
+//   for(let i = 1; i <= num; i++){
+//     sum += i;
+//   } 
+//   return sum;
+// }
+
+// console.log(summation(8));
+
+// Very simple, given an integer or a floating-point number, find its opposite.
+
+// Examples:
+
+// 1: -1
+// 14: -14
+// -34: 34
+
+// function opposite(number) {
+//   return opp = number * (-1);
+// }
+
+// console.log(opposite(5));
+
+// CODEWARS KODAI:
+
+// function opposite(number) {
+//   return(-number);
+// }
+
+// Nathan loves cycling.
+
+// Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+
+// You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+
+// For example:
+
+// time = 3 ----> litres = 1
+
+// time = 6.7---> litres = 3
+
+// time = 11.8--> litres = 5
+
+// function litres(time) {
+//   let litters = 0;
+//   litters = Math.floor(time * 0.5);
+//   return litters;
+// }
+
+// console.log(litres(11.8));
+
+// CODEWARS kodai:
+
+// function litres(time) {
+//   return Math.floor(time/2);
+// }
+
+// const litres = time => Math.floor(time * 0.5);
+
+
+// You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+// If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+// Example(Input1, Input2 --> Output):
+
+// 6, 10 --> 32
+// 3, 3 --> 9
+// Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
+
+
+// const areaOrPerimeter = function(l , w) {
+//   let sum = l === w ? l * w : l * 2 + w * 2;
+
+//   return sum;
+// }
+
+// console.log(areaOrPerimeter(6, 10));
+
+// Introduction
+// The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+
+// Task
+// Given a year, return the century it is in.
+
+// Examples
+// 1705 --> 18
+// 1900 --> 19
+// 1601 --> 17
+// 2000 --> 20
+// Note: this kata uses strict construction as shown in the description and the examples, you can read more about it here
+
+// function century(year) {
+//   let century = Math.ceil(year/100);
+
+//   return century;
+// }
+
+// console.log(century(8));
+
+
+// Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+// For example,
+
+// [true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]
+// // The correct answer would be 17.
+
+// // Hint: Don't forget to check for bad values like null/undefined
+
+// function countSheeps(arrayOfSheep) {
+//   let result = 0;
+//   if (!Array.isArray(arrayOfSheep)){
+//    return `Not array`; 
+//   }
+//   for(let i = 0; i < arrayOfSheep.length; i++){
+//     if(arrayOfSheep[i] === true){
+//       result++;
+//     }  
+//   }
+//   return result;
+//   }
+
+//   console.log(countSheeps(
+
+//     [true,  true,  true,  false,
+//     true,  true,  true,  true ,
+//     true,  false, true,  false,
+//     true,  false, false, true ,
+//     true,  true,  true,  true ,
+//     false, false, true,  true]
+    
+//     ));
+
+
+// CODEWARS kodai:
+
+// function countSheeps(arr) {
+//   return arr.filter(Boolean).length;
+// }
+
+
+// The Story:
+// Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. With so many passengers wanting to get aboard his bus, he sometimes has to face the problem of not enough space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
+
+// Task Overview:
+// You have to write a function that accepts three parameters:
+
+// cap is the amount of people the bus can hold excluding the driver.
+// on is the number of people on the bus excluding the driver.
+// wait is the number of people waiting to get on to the bus excluding the driver.
+// If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+
+// Usage Examples:
+// cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+// cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+
+// function enough(cap, on, wait) {
+//   let left = cap - on;
+//   let cantFit = wait - left;
+//   if (left >= wait){
+//     return 0;
+//   }else {
+//     return `netelpa`;
+//   }
+
+// }
+
+// console.log(enough(100, 60, 50));
+
+//CODEWARS kodai:
+
+// The BOPE is the squad of special forces of police that usually handles the operations in the Favelas in Rio de Janeiro.
+
+// In this Kata you have to write a function that determine the number of magazines that every soldier has to have in his bag.
+
+// You will receive the weapon and the number of streets that they have to cross. Considering that every street the officer shoots 3 times. Bellow there is the relation of weapons:
+
+// PT92 - 17 bullets
+// M4A1 - 30 bullets
+// M16A2 - 30 bullets
+// PSG1 - 5 bullets
+
+// Example:
+
+// ["PT92", 6] => 2 (6 streets 3 bullets each)
+// ["M4A1", 6] => 1
+
+// The return Will always be an integer so as the params.
+
+
+function magNumber(info){
+  let result = 0;
+  let bullets = info * 3;
+  let arr = [['PT92', 17], ['M4A1', 30], ['M16A2', 30], ['PSG1', 5]];
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i][0] === 'info'){
+      result = arr[]
+    }
+    console.log(arr[i][0]);
   }
+}
+
+console.log(magNumber());
