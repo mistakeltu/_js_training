@@ -1400,7 +1400,73 @@ console.clear();
 // Note: String will have at least one element; words will always be separated by a space.
 
 
-function addLength(str) {
+// function addLength(str) {
+//     let result = 0;
+//     result = str.split(' ').map(x => {
+//         return x + " " + x.length;
+//     });
+//     return result;
+//     }
+
+//     console.log(addLength('karolis kava le mar'));
     
-    }
-    
+// CODEWARS KODAI:
+
+// function addLength(str){
+//     return str.split(" ").map(s => `${s} ${s.length}`)
+//   }
+
+
+// Complete the solution so that it reverses all of the words within the string passed in.
+
+// Words are separated by exactly one space and there are no leading or trailing spaces.
+
+// Example(Input --> Output):
+
+// "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+
+
+// function reverseWords(str){
+//     let result = str.split(' ');
+//     let newWords = '';
+//     for(let i = result.length; i > 0; i--){
+//         newWords += ' ' + result[i - 1];
+//     }
+//     return newWords.trim();
+//   }
+
+//   console.log(reverseWords('yoda doesnt speak like this'));
+
+//   CODEWARS KODAI:
+
+//   function reverseWords(str){
+//     return str.split(' ').reverse().join(' ');
+//   }
+
+// Convert number to reversed array of digits
+// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+// Example(Input => Output):
+// 35231 => [1,3,2,5,3]
+// 0 => [0]
+
+
+// function digitize(n) {
+//     let result = '';
+//     let newArr = 0;
+//     let arr = Array.from(String(n), Number);
+//        for(let i = arr.length; i > 0; i--){
+//         result += arr[i - 1];
+//         newArr = Array.from(String(result), Number);
+//        }
+
+//         return newArr;
+//     }
+
+//   console.log(digitize(35222));
+
+//   CODEWARS KODAI:
+
+//   function digitize(n) {
+//     return String(n).split('').map(Number).reverse()
+//   }
