@@ -1529,19 +1529,42 @@ console.clear();
 // arrayDiff([1,2],[1]) == [2]
 // If a value is present in b, all of its occurrences must be removed from the other:
 
-// arrayDiff([1,2,2,2,3],[2]) == [1,3]
+//arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 // function arrayDiff(a, b) {
 //     let result = [];
-
-//     for(let i = 0; i < a.length; i++){
-//         result += a[i] - b[i];
+//     if(b.length === 0){
+//         return a;
+//     }else if(a.length === 0){
+//         return a;
 //     }
+//     for(let i = 0; i < a.length; i++){
+//         let found = false;
+//         for(let j = 0; j < b.length; j++){
+//             if(a[i] === b[j]){
+//                 found = true;
+//                 break;
+//         }
+//     }
+//     if(!found){
+//         result.push(a[i]);
+//     }
+// }
 //     return result;
 // }
 
-// console.log(arrayDiff([2,1,1], [1]));
+// console.log(arrayDiff([ -13, -4, 18, -19, -9, 17, 0, -13, -14, 14 ], [0, -14, 14]));
 
+
+//function array_diff(a, b) {
+//     return a.filter(e => !b.includes(e));
+// }
+
+// const arr1 = [1, 3, 2, 3, 4, 5, 3]
+// const arr2 = [3, 2]
+// function difference(a1, a2) {
+//   const res = a1.filter(item => !a2.includes(item))
+//   console.log(res)
 
 
 
@@ -1591,15 +1614,150 @@ console.clear();
 // invert([]) == []
 // You can assume that all values are integers. Do not mutate the input array/list.
 
-function invert(array) {
-    let result = 0;
-    let newArr = 0;
-    for(let i = 0; i < array.length; i++){
-        console.log(array[i]);    
-        result += array[i] * (-1);
-        
-    }
-    return result;
-  }
+// function invert(array) {
+//     let result = 0;
+//     let newArr = [];
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] > 0 || array[i] < 0){
+//             result = array[i] * (-1);
+//             newArr.push(result); 
+//         }else if (array[i] === 0){
+//             result = array[i];
+//             newArr.push(result);
+//         }
+//     }
+//     return newArr;
+//   }
 
-  console.log(invert([1,2,3,4,5]));
+//   console.log(invert([]));
+
+//   CODEWARS kodai:
+
+//   const invert = array => array.map(num => -num);
+
+//   function invert(array) {
+//     var newArr = [];
+//     for(var i = 0; i < array.length; i++){
+//       newArr.push(-array[i]);
+//     }
+//      return newArr;
+//   }
+
+
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+
+
+// function doubleChar(str) {
+//     let result = '';
+//     for(let i = 0; i < str.length; i++){
+//         result += str[i].repeat(2);
+//     }
+//     return result;
+//   }
+
+//let doubleChar = (stringas) => stringas.split('').map(x => x + x).join("");
+
+//   console.log(doubleChar('lol'));
+
+// If you can't sleep, just count sheep!!
+
+// Task:
+// Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+
+// function countSheep(num) {
+//     let count = '';
+//     for(let i = 1; i <= num; i++){
+//          count += `${i} sheep...`;
+//     }
+//     return count;
+// }
+
+// console.log(countSheep(3));
+
+// Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+// function longest(s1, s2) {
+//     let newString = s1.concat(s2).split('').sort();
+//     newString = Array.from(new Set(newString)).join("");
+    
+//     return newString;
+//   }
+
+//   console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
+
+
+//   CODEWARS kodai:
+
+//   function longest(s1, s2) {
+//     return Array.from(new Set(s1 + s2)).sort().join('');
+//   }
+
+// Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+
+// Examples
+// Input: [1, 5.2, 4, 0, -1]
+// Output: 9.2
+
+// Input: []
+// Output: 0
+
+// Input: [-2.398]
+// Output: -2.398
+
+// Assumptions
+// You can assume that you are only given numbers.
+// You cannot assume the size of the array.
+// You can assume that you do get an array and if the array is empty, return 0.
+// What We're Testing
+// We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
+// Advanced users may find this extremely easy and can easily write this in one line.
+
+// Sum Numbers
+
+// function sum (numbers) {
+//     let sum = 0;
+//       for(let i = 0; i < numbers.length; i++){
+//         sum += numbers[i];
+//       }
+//     return sum;
+      
+//   }
+
+//   console.log(sum([]));
+
+
+// function sum(numbers) {
+//     return numbers.reduce((a, b) => a + b, 0);
+//   }
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+
+
+// function findShort(s){
+//     let arr = s.split(' ');
+//     let min = Infinity;
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i].length < min){
+//             min = arr[i].length;
+//         }
+//     }
+//     return min;
+// }
+// console.log(findShort('vienas du trys'));
+
+
