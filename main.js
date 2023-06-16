@@ -1843,3 +1843,183 @@ console.clear();
 // function sumMix(x){
 //     return x.map(a => +a).reduce((a, b) => a + b);
 //   }
+
+// Given an array of integers, return a new array with each value doubled.
+
+// For example:
+
+// [1, 2, 3] --> [2, 4, 6]
+
+// let maps = x => x.map(x => x*2);
+
+// CODEWARS kodai:
+
+// function maps(x){
+//     return x.map(n => n * 2);
+//   }
+
+// function monkeyCount(n) {
+//     let arr = [];
+//     if (n <= 0){
+//         return 0;
+//     }
+//     for(let i = 1; i < n + 1; i++){
+//         arr.push(i);
+//     }
+//     return arr;
+//     }
+
+//     console.log(monkeyCount(0));
+
+//CODEWARS:
+
+// for (var i = 0, arr = []; i < n; arr.push(++i));
+
+// Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+
+// For example:
+
+// a = 1
+// b = 4
+// --> [1, 2, 3, 4]
+
+// function between(a, b) {
+//     let arr = [];
+//     for(let i = a; i < b+1; i++){
+//         arr.push(i);
+//     }
+//     return arr;
+//   }
+
+//   console.log(between(-2, 4));
+
+// Complete the function, which calculates how much you need to tip based on the total amount of the bill and the service.
+
+// You need to consider the following ratings:
+
+// Terrible: tip 0%
+// Poor: tip 5%
+// Good: tip 10%
+// Great: tip 15%
+// Excellent: tip 20%
+// The rating is case insensitive (so "great" = "GREAT"). If an unrecognised rating is received, then you need to return:
+
+// "Rating not recognised" in Javascript, Python and Ruby...
+// ...or null in Java
+// ...or -1 in C#
+// Because you're a nice person, you always round up the tip, regardless of the service.
+
+// function calculateTip(amount, rating) {
+//     let terrible = 'Terrible';
+//     let poor = 'poor';
+//     let good = 'good';
+//     let great = 'great';
+//     let excellent = 'exellent';
+//     let sum = 0;
+
+//     if(rating.toUpperCase() === terrible.toUpperCase()){
+//         sum = Math.ceil((amount * 0) / 100)
+//     }else if(rating.toUpperCase() === poor.toUpperCase()){
+//         sum = Math.ceil((amount * 5) / 100)
+//     }else if(rating.toUpperCase() === good.toUpperCase()){
+//         sum = Math.ceil((amount * 10) / 100)
+//     }else if(rating.toUpperCase() === great.toUpperCase()){
+//         sum = Math.ceil((amount * 15) / 100)
+//     }else if(rating.toUpperCase() === excellent.toUpperCase()){
+//         sum = Math.ceil((amount * 20) / 100)
+//     }else{
+//         return `Rating not recognised`;
+//     }
+//     return sum;
+// }
+
+// console.log(calculateTip(26.95, '4'))
+
+// Create a function finalGrade, which calculates the final grade of a student depending on two parameters: a grade for the exam and a number of completed projects.
+
+// This function should take two arguments: exam - grade for exam (from 0 to 100); projects - number of completed projects (from 0 and above);
+
+// This function should return a number (final grade). There are four types of final grades:
+
+// 100, if a grade for the exam is more than 90 or if a number of completed projects more than 10.
+// 90, if a grade for the exam is more than 75 and if a number of completed projects is minimum 5.
+// 75, if a grade for the exam is more than 50 and if a number of completed projects is minimum 2.
+// 0, in other cases
+// Examples(Inputs-->Output):
+
+// 100, 12 --> 100
+// 99, 0 --> 100
+// 10, 15 --> 100
+
+// 85, 5 --> 90
+
+// 55, 3 --> 75
+
+// 55, 0 --> 0
+// 20, 2 --> 0
+// *Use Comparison and Logical Operators.
+
+// function finalGrade (exam, projects) {
+//     if(exam > 90 || projects > 10){
+//         return 100;
+//     }else if(exam > 75 && projects >= 5){
+//         return 90;
+//     }else if(exam > 50 && projects >=2){
+//         return 75;
+//     }else{
+//         return 0;
+//     }
+//   }
+
+//   console.log(finalGrade(33, 10));
+
+// In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+// For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+
+// function findMultiples(integer, limit) {
+//     let arr = [];
+//     for(let i = integer; i <= limit; i = i + integer ){
+//         arr.push(i);
+//     }
+//     return arr;
+//   }
+
+//   console.log(findMultiples(5, 10));
+
+//   CODEWARS kodai:
+
+//   function findMultiples(int,limit){
+//     let result = []
+    
+//     for (let i = int; i<=limit ; i+=int)
+//       result.push(i)
+      
+//     return result
+//   }
+
+// There is a bus moving in the city which takes and drops some people at each bus stop.
+
+// You are provided with a list (or array) of integer pairs. Elements of each pair represent the number of people that get on the bus (the first item) and the number of people that get off the bus (the second item) at a bus stop.
+
+// Your task is to return the number of people who are still on the bus after the last bus stop (after the last array). Even though it is the last bus stop, the bus might not be empty and some people might still be inside the bus, they are probably sleeping there :D
+
+// Take a look on the test cases.
+
+// Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the returned integer can't be negative.
+
+// The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
+
+// var number = function(busStops){
+//     let result = 0;
+//     for(let i = 0; i < busStops.length; i++){
+//         result += busStops[i][0] - busStops[i][1];    
+//     }
+//     return result;
+//   }
+
+// console.log(number([[10,0],[3,5],[5,8]]));
+
+// CODEWARS kodai:
+
+// const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
