@@ -1760,4 +1760,86 @@ console.clear();
 // }
 // console.log(findShort('vienas du trys'));
 
+// Is the string uppercase?
+// Task
+// Create a method to see whether the string is ALL CAPS.
 
+// Examples (input -> output)
+// "c" -> False
+// "C" -> True
+// "hello I AM DONALD" -> False
+// "HELLO I AM DONALD" -> True
+// "ACSKLDFJSgSKLDFJSKLDFJ" -> False
+// "ACSKLDFJSGSKLDFJSKLDFJ" -> True
+// In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase letter so any string containing no letters at all is trivially considered to be in ALL CAPS.
+
+// function isUpperCase(stringas) {
+//     if(stringas === stringas.toUpperCase()){
+//         return true;
+//     }else {
+//         return false;
+//     }
+// }
+//  console.log(isUpperCase('KAROLIS'));
+
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+// None of the arrays will be empty, so you don't have to worry about that!
+
+// function removeEveryOther(stringas){
+//     let arr = [];
+//     for(let i = 0; i < stringas.length; i = i + 2){
+//         arr.push(stringas[i]);
+//     }
+//     return arr;
+// }
+
+// console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"]));
+
+// CODEWARS kodai:
+
+// function removeEveryOther(arr){
+//     return arr.filter(function(elem, index) {
+//       return index % 2 === 0;
+//     });
+//   }
+
+// Numbers ending with zeros are boring.
+
+// They might be fun in your world, but not here.
+
+// Get rid of them. Only the ending ones.
+
+// 1450 -> 145
+// 960000 -> 96
+// 1050 -> 105
+// -1050 -> -105
+// Zero alone is fine, don't worry about it. Poor guy anyway
+
+//------------------------------------
+
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+
+// assert.strictEqual(sumMix([9, 3, '7', '3']), 22);
+// assert.strictEqual(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 42); 
+// assert.strictEqual(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']), 41); 
+// 
+
+// function sumMix(x){
+//     let sum = 0
+//     for(let i = 0; i < x.length; i++){
+//         sum += Number(x[i]);
+//     }
+//     return sum;
+// }
+
+// console.log(sumMix([9, 3, '7', '3']));
+
+// function sumMix(x){
+//     return x.map(a => +a).reduce((a, b) => a + b);
+//   }
