@@ -2067,3 +2067,23 @@ console.clear();
 //     return array.join('\n');
 //  }
 
+// // DON'T TOUCH THIS LINE! (please)
+// const word = "skateboard"; //Don't change this line!
+
+// // YOUR CODE BELOW THIS LINE:
+
+// word.slice(4);
+
+// console.log(word.slice(5).replace('o', 'e'));
+
+// Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+// function problem(x){
+//     let sum = 0;
+//     if(typeof x === 'number'){
+//       sum = x * 50 + 6;
+//     }else {
+//       return 'Error';
+//     }
+//     return sum;
+//   }
